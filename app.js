@@ -85,8 +85,7 @@ Exercise 5: greetUser()
 
 Define a function called greetUser. It should take a name and a 
 time of day (morning, afternoon, evening) and return a personalized 
-greeting.
-
+greeting
 Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 
 Complete the exercise in the space below:
@@ -140,7 +139,89 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip()
+function calculateTip(billAmount, tipPercent) {
+    return billAmount * (tipPercent / 100) 
+}
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+// function convertTemperature(temperature, scale) {
+//     let fahrenheit = temperature * 9 / 5 + 32
+//     let celcius = (temperature - 32) * (5 / 9)
+// }
+
+function convertTemperature(temperature, scale) {
+    if (scale === "F") {
+        return temperature = (temperature - 32) * (5 / 9)
+    } else {
+        return temperature = (temperature * 9 / 5 + 32)
+    }
+}
+
+console.log('Exercise 8 Result:', convertTemperature(32, "F"));
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+/*function basicCalculator(numA, numB, string) {
+    //return numA - numB
+    if add = "numA + numB" {
+    } else if 
+        subtract = "numA - numB" {
+    } else if 
+        multiply = "numA * numB" {
+    } else if
+        divide = "numA / numB"
+} */
+
+function basicCalculator(numOne, numTwo, operation) {
+    if(operation === "add") {
+        return numOne + numTwo
+    } else if (operation === "subtract") {
+        return numOne - numTwo
+    } else if (operation === "multiply") {
+        return numOne * numTwo
+    } else {
+        return numOne / numTwo
+    }
+}
+
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+
+
+
+
+
+/*Questions/Review:
+-Function 'declarations' vs 'expressions'
+-understanding variable names do not have literal interpretations ie: 
+    function add(numA, numB) {} /does not automatically 'add' the entered values?
+    */
